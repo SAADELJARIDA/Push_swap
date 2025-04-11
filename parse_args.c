@@ -78,10 +78,12 @@ t_stack	*load_a(int ac, char **av)
 		a_add_back(a, better_atoi(arr[i]));
 		i++;
 	}
+	gv_a()->size = i;
 	free_arr(arr);
 	return (a);
 }
-int main(int ac, char **av)
+
+int	main(int ac, char **av)
 {
 	t_stack *a;
 	t_list	*temp;
@@ -95,6 +97,7 @@ int main(int ac, char **av)
 		printf("%d\n", *(int *)temp->content);
 		temp = temp->next;
 	}
+	printf("Size of the list is : %d", gv_a()->size);
 	free_all_exit(0);
 }
 /*
