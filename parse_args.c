@@ -87,7 +87,7 @@ int	main(int ac, char **av)
 {
 	t_stack *a;
 	t_list	*temp;
-
+	int	*arr;
 	if (ac == 1)
 		return (0);
 	a = load_a(ac, av);
@@ -97,7 +97,15 @@ int	main(int ac, char **av)
 		printf("%d\n", *(int *)temp->content);
 		temp = temp->next;
 	}
-	printf("Size of the list is : %d", gv_a()->size);
+	printf("Size of the list is : %d\n", gv_a()->size);
+	printf("the arr is ---------: \n");
+	arr = list_to_arr(gv_a()->head, gv_a()->size);
+	int i= 0;
+	while (i < gv_a()->size)
+	{
+		printf("%d\n", arr[i]);
+		i++;
+	}
 	free_all_exit(0);
 }
 /*

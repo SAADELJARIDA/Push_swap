@@ -40,4 +40,7 @@ void	swap(t_stack *stack);
 void	push(t_stack *stack_to_push, t_stack *take_elemt);
 void	rotate(t_stack *stack);
 void	r_rotate(t_stack *stack);
+
+
+int		*list_to_arr(t_list* head, int size);
 #endif

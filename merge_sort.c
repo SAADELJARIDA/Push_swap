@@ -1,69 +1,60 @@
 #include "push_swap.h"
 
-void split_list(t_list *source, t_list **front, t_list **back, int mid) {
-	t_list *current;
-	int count;
+int	*list_to_arr(t_list* head, int size)
+{
+	int i;
+	int	*arr;
 
-	count = 0;
-	*current = source
-	while (count < mid - 1 && current != NULL) 
+	arr = malloc((size) * sizeof(int));
+	if (arr == NULL)
+		free_all_exit(1);
+	i = 0;
+	while (head)
 	{
-		current = current->next;
-		count++;
+		arr[i++] = *(int*)head->content;
+		head = head->next;
 	}
-	*front = source;
-	*back = current->next;
-	current->next = NULL;
+	return (arr);
+}
+void swap(int* a, int* b)
+{
+    int temp;
+
+	temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
-t_list *merge_sorted_lists(t_list *a, t_list *b)
+int partition(int arr[], int low, int high)
 {
-	t_list dummy;
-	t_list *tail;
-
-	dummy.next = NULL;
-	tail = &dummy;
-	while (a != NULL && b != NULL)
+    int	pivot;
+    int i;
+	int	j;
+ 	
+	pivot = arr[high];
+ 	i = low - 1;
+	j = low;
+    while (j < high)
 	{
-		if (a->value <= b->value)
+        if (arr[j] <= pivot)
 		{
-			tail->next = a;
-			a = a->next;
-		}
-		else
-		{
-			tail->next = b;
-			b = b->next;
-		}
-		tail = tail->next;
-	}
- 
-
-	if (a != NULL)
-		tail->next = a;
-	else
-		tail->next = b;
-
-	return dummy.next;
+            i++;
+            swap(&arr[i], &arr[j]);
+        }
+		j++;
+    }
+    swap(&arr[i + 1], &arr[high]);
+    return i + 1;
 }
 
-t_list *merge_sort(t_list *head, int size)
+void quick_sort(int arr[], int low, int high)
 {
-	t_list *front;
-	t_list *back;
-	int		mid;
+    int pivot_index;
 
-	mid = size / 2;
-	if (head == NULL || head->next == NULL)
-		return (head);
-
-	// Split the list into two halves
-	split_list(head, &front, &back, mid);
-
-	// Recursively sort the front and back
-	front = merge_sort(front, mid);
-	back = merge_sort(back, size - mid);
-
-	// Merge the sorted halves
-	return merge_sorted_lists(front, back);
+    if (low < high)
+	{
+		pivot_index = partition(arr, low, high);
+        quick_sort(arr, low, pivot_index - 1);
+        quick_sort(arr,  pivot_index + 1, high);
+    }
 }
