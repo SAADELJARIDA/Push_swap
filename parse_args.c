@@ -100,6 +100,7 @@ int	main(int ac, char **av)
 	printf("Size of the list is : %d\n", gv_a()->size);
 	printf("the arr is ---------: \n");
 	arr = list_to_arr(gv_a()->head, gv_a()->size);
+	quick_sort(arr, 0, gv_a()->size - 1);
 	int i= 0;
 	while (i < gv_a()->size)
 	{

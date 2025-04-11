@@ -16,7 +16,7 @@ int	*list_to_arr(t_list* head, int size)
 	}
 	return (arr);
 }
-void swap(int* a, int* b)
+void swap_element(int* a, int* b)
 {
     int temp;
 
@@ -30,20 +30,20 @@ int partition(int arr[], int low, int high)
     int	pivot;
     int i;
 	int	j;
- 	
+
 	pivot = arr[high];
- 	i = low - 1;
+	i = low - 1;
 	j = low;
     while (j < high)
 	{
         if (arr[j] <= pivot)
 		{
             i++;
-            swap(&arr[i], &arr[j]);
+            swap_element(&arr[i], &arr[j]);
         }
 		j++;
     }
-    swap(&arr[i + 1], &arr[high]);
+    swap_element(&arr[i + 1], &arr[high]);
     return i + 1;
 }
 

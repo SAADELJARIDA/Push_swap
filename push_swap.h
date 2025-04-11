@@ -43,4 +43,5 @@ void	r_rotate(t_stack *stack);
 
 
 int		*list_to_arr(t_list* head, int size);
+void quick_sort(int arr[], int low, int high);
 #endif
