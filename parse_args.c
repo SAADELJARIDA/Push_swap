@@ -107,6 +107,12 @@ int	main(int ac, char **av)
 		printf("%d\n", arr[i]);
 		i++;
 	}
+	temp = a->head;
+	while (temp != NULL)
+	{
+		printf("%d\n", *(int *)temp->content);
+		temp = temp->next;
+	}
 	free_all_exit(0);
 }
 /*
