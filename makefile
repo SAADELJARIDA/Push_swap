@@ -26,9 +26,9 @@ LIBFT = libft/libft.a
 
 RM = rm -f
 
-all: ${NAME} ${HEADER}
+all: ${NAME}
 
-${NAME}: ${OBJ}
+${NAME}: ${OBJ} ${HEADER}
 	${CC} ${OBJ} ${LIBFT} -o ${NAME}
 
 clean:
