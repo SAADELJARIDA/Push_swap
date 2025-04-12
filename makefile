@@ -15,18 +15,18 @@ SRC = ab_ops.c b_ops.c init.c normalize_input.c push_swap.c stack_ops.c \
 	push_to_a.c
 
 NAME = push_swap
-
+HEADER = push_swap.h
 OBJ = ${SRC:.c=.o}
 
 CC = cc
 
-CFLAGS = -Wall -Wall -Werror
+CFLAGS = -Wall -Wall -Werror -g
 
 LIBFT = libft/libft.a
 
 RM = rm -f
 
-all: ${NAME}
+all: ${NAME} ${HEADER}
 
 ${NAME}: ${OBJ}
 	${CC} ${OBJ} ${LIBFT} -o ${NAME}

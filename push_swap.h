@@ -13,7 +13,6 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include "libft/libft.h"
 
@@ -32,6 +31,15 @@ typedef struct s_cont
 	int	start;
 	int	end;
 }			t_cont;
+
+typedef struct s_sp
+{
+	int	head;
+	int	second;
+	int	third;
+	int	fourth;
+	int	tail;
+}			t_sp;
 
 t_stack	*gv_a(void);
 t_stack	*gv_b(void);
@@ -77,6 +85,7 @@ void	sort_5(void);
 
 void	load_range(void);
 
-void	push_to_b();
-void	push_to_a(int *sorted_arr);
+void	push_to_b(void);
+void	push_to_a(t_list **head_a, t_list **head_b);
+
 #endif

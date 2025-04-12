@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   big_sort.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sel-jari <marvin@42.ma>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/12 23:59:47 by sel-jari          #+#    #+#             */
+/*   Updated: 2025/04/12 23:59:48 by sel-jari         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	load_range(void)
@@ -8,11 +20,10 @@ void	load_range(void)
 	cont = gv_cont();
 	size = gv_a()->size;
 	if (size > 5 && size < 100)
-		cont->end = size / 6;
-	if (size > 100)
+		cont->end = size / 5;
+	if (size > 100 && size <= 500)
 		cont->end = size / 12;
 }
-
 
 void	update_range(int *start, int *end, int size)
 {
@@ -26,22 +37,22 @@ void	b_stack_condition(t_list *head)
 {
 	int	value1;
 	int	value2;
-	
+
 	if (head->next == NULL)
 		return ;
 	value1 = *(int *)head->content;
 	value2 = *(int *)head->next->content;
 	if (value1 < value2)
-		rb();
+		sb();
 }
 
-void	push_to_b()
+void	push_to_b(void)
 {
 	int		*arr;
 	int		value;
 
 	arr = list_to_arr(gv_a()->head, gv_a()->size);
-	quick_sort(arr, 0 , gv_a()->size - 1);
+	quick_sort(arr, 0, gv_a()->size - 1);
 	load_range();
 	while (gv_a()->head)
 	{
@@ -61,5 +72,5 @@ void	push_to_b()
 		else
 			ra();
 	}
-	push_to_a(arr);
+	free(arr);
 }

@@ -1,46 +1,49 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_to_a.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sel-jari <marvin@42.ma>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/12 23:58:52 by sel-jari          #+#    #+#             */
+/*   Updated: 2025/04/12 23:58:54 by sel-jari         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-static int	find_index(int	max)
+int	max_index(t_list *head)
 {
-	t_list	*temp;
-	int	i;
-
-	i = 0;
-	temp = gv_b()->head;
-	while (temp)
-	{
-		if (max == *(int *)temp->content)
-			return (i);
-		temp = temp->next;
-	}
-	return (0);
-}
-void	push_to_a(int *sorted_arr)
-{
-	int	i;
 	int	max;
-	int	size;
+	int	i;
+	int	i_max;
 
-	size = gv_a()->size;
-	max = sorted_arr[size - 1];
-	while (gv_b()->head)
+	max = *(int *)head->content;
+	i = 0;
+	i_max = 0;
+	while (head)
 	{
-		i = find_index(max);
-		if (*(int *)gv_b()->head->content == max)
+		if (*(int *)head->content > max)
 		{
-			pa();
-			max = sorted_arr[size--];
-			return ;
+			max = *(int *)head->content;
+			i_max = i;
 		}
-		else if (i < (size / 2 - 1))
-		{
-			while (*(int *)gv_b()->head->content != max)
-				rb();
-		}
-		else if (i > (size / 2 - 1))
-		{
-			while (*(int *)gv_b()->head->content != max)
+		head = head->next;
+		i++;
+	}
+	return (i_max);
+}
+
+void	push_to_a(t_list **head_a, t_list **head_b)
+{
+	while (*head_b)
+	{
+		if (max_index(*head_b) > (ft_lstsize(*head_b) / 2))
+			while (max_index(*head_b) != 0)
 				rrb();
-		}
+		else
+			while (max_index(*head_b) != 0)
+				rb();
+		pa();
 	}
 }

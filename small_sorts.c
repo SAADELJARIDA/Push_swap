@@ -89,29 +89,25 @@ void	sort_4(void)
 
 void	sort_5(void)
 {
-	int	head;
-	int	second;
-	int	third;
-	int	fourth;
-	int	tail;
+	t_sp	sp;
 
 	pb();
 	sort_4();
 	pa();
-	head = *(int *)gv_a()->head->content;
-	second = *(int *)gv_a()->head->next->content;
-	third = *(int *)gv_a()->head->next->next->content;
-	fourth = *(int *)gv_a()->head->next->next->next->content;
-	tail = *(int *)gv_a()->tail->content;
-	if (head < second)
+	sp.head = *(int *)gv_a()->head->content;
+	sp.second = *(int *)gv_a()->head->next->content;
+	sp.third = *(int *)gv_a()->head->next->next->content;
+	sp.fourth = *(int *)gv_a()->head->next->next->next->content;
+	sp.tail = *(int *)gv_a()->tail->content;
+	if (sp.head < sp.second)
 		return ;
-	if (head > tail)
+	if (sp.head > sp.tail)
 		ra();
-	if (head > second && head < third)
+	if (sp.head > sp.second && sp.head < sp.third)
 		sa();
-	if (head > third && head < fourth)
+	if (sp.head > sp.third && sp.head < sp.fourth)
 		sa_ra_sa_rra();
-	if (head > fourth && head < tail)
+	if (sp.head > sp.fourth && sp.head < sp.tail)
 	{
 		rra();
 		sa();
