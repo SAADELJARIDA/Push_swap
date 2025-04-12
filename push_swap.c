@@ -11,23 +11,38 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-/*
+
 int	main(int ac, char **av)
 {
-	t_list	*temp;
 	t_stack	*a;
+	t_list	*temp;
 
 	if (ac == 1)
-		return 0;
-	a = load_a(ac, av);
+		return (0);
+	a = norm_arg(ac, av);
+	if (is_sorted())
+		return (0);
+	gv_b();
 	temp = a->head;
-	printf("%d\n",*(int *)temp->content);
-
-	char **arr = normalize_input_args(ac, av);
-	while(*arr != NULL)
+	while (temp != NULL)
 	{
-		printf("%s\n",*arr);
-		arr++;
+		printf("%d\n", *(int *)temp->content);
+		temp = temp->next;
 	}
+	printf("\n");
+	if (a->size == 2)
+		sa();
+	if (a->size == 3)
+		sort_3();
+	if (a->size == 4)
+		sort_4();
+	if (a->size == 5)
+		sort_5();
+	temp = a->head;
+	while (temp != NULL)
+	{
+		printf("%d\n", *(int *)temp->content);
+		temp = temp->next;
+	}
+	free_all_exit(0);
 }
-*/

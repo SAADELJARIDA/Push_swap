@@ -42,6 +42,7 @@ void	free_all_exit(int status)
 {
 	if (*gv_arr() != NULL)
 		free_arr(*gv_arr());
+	ft_lstclear(&(gv_b()->head), del);
 	ft_lstclear(&(gv_a()->head), del);
 	ft_exit(status);
 }

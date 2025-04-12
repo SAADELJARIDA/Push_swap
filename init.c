@@ -12,6 +12,14 @@
 
 #include "push_swap.h"
 
+/*
+t_move *gv_move(void)
+{
+	static t_move;
+
+	return (&t_move);
+}
+ */
 t_stack	*gv_a(void)
 {
 	static t_stack	a;
@@ -23,8 +31,6 @@ t_stack	*gv_b(void)
 {
 	static t_stack	b;
 
-	if (b.name == NULL)
-		b.name = "a";
 	return (&b);
 }
 

@@ -53,6 +53,8 @@ void	r_rotate(t_stack *stack);
 int		*list_to_arr(t_list *head, int size);
 void	quick_sort(int *arr, int low, int high);
 
+t_stack	*norm_arg(int ac, char **av);
+
 void	sa(void);
 void	pa(void);
 void	ra(void);
@@ -67,6 +69,8 @@ void	pb(void);
 void	rb(void);
 void	rrb(void);
 
+int		is_sorted(void);
 void	sort_3(void);
 void	sort_4(void);
+void	sort_5(void);
 #endif

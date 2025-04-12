@@ -20,7 +20,7 @@ void	sb(void)
 
 void	pb(void)
 {
-	push(gv_a(), gv_b());
+	push(gv_b(), gv_a());
 	write(1, "pb\n", 3);
 }
 

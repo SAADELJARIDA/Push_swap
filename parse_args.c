@@ -84,33 +84,3 @@ t_stack	*norm_arg(int ac, char **av)
 	free_arr(arr);
 	return (a);
 }
-
-int	main(int ac, char **av)
-{
-	t_stack	*a;
-	t_list	*temp;
-	t_stack	*b;
-
-	if (ac == 1)
-		return (0);
-	a = norm_arg(ac, av);
-	b = gv_b();
-	temp = a->head;
-	while (temp != NULL)
-	{
-		printf("%d\n", *(int *)temp->content);
-		temp = temp->next;
-	}
-	printf("\n");
-	if (a->size == 4)
-		sort_4();
-	b = NULL;
-	temp = a->head;
-	while (temp != NULL)
-	{
-		printf("%d\n", *(int *)temp->content);
-		temp = temp->next;
-	}
-}
-/*
-*/

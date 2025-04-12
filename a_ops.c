@@ -20,7 +20,7 @@ void	sa(void)
 
 void	pa(void)
 {
-	push(gv_b(), gv_a());
+	push(gv_a(), gv_b());
 	write(1, "pa\n", 3);
 }
 

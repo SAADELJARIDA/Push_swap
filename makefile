@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 SRC = ab_ops.c b_ops.c init.c normalize_input.c push_swap.c stack_ops.c \
-	a_ops.c free_and_exit.c quick_sort.c parse_args.c
+	a_ops.c free_and_exit.c quick_sort.c parse_args.c small_sorts.c
 
 NAME = push_swap
 

@@ -38,16 +38,15 @@ void	swap_element(int *a, int *b)
 	*b = temp;
 }
 
-int partition(int *arr, int low, int high)
+int	partition(int *arr, int low, int high)
 {
-	int pivot;
-	int left;
-	int right;
+	int	pivot;
+	int	left;
+	int	right;
 
 	right = high;
 	left = low + 1;
 	pivot = arr[low];
-
 	while (left <= right)
 	{
 		while (left <= high && arr[left] < pivot)
@@ -58,7 +57,7 @@ int partition(int *arr, int low, int high)
 			swap_element(&arr[left], &arr[right]);
 	}
 	swap_element(&arr[low], &arr[right]);
-	return right;
+	return (right);
 }
 
 void	quick_sort(int *arr, int low, int high)
