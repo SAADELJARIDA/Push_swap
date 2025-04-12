@@ -16,14 +16,12 @@ int	main(int ac, char **av)
 {
 	t_stack	*a;
 	t_list	*temp;
-	t_stack	*b;
 
 	if (ac == 1)
 		return (0);
 	a = norm_arg(ac, av);
 	if (is_sorted())
 		return (0);
-	b = gv_b();
 	temp = a->head;
 	while (temp != NULL)
 	{
@@ -42,8 +40,8 @@ int	main(int ac, char **av)
 	else
 	{
 		push_to_b();
-		printf("stack b:\n");
-		temp = b->head;
+		printf("stack a:\n");
+		temp = a->head;
 		while (temp != NULL)
 		{
 			printf("%d\n", *(int *)temp->content);

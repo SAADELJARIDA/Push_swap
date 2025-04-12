@@ -61,4 +61,5 @@ void	push_to_b()
 		else
 			ra();
 	}
+	push_to_a(arr);
 }

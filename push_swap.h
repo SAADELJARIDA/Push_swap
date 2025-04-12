@@ -78,4 +78,5 @@ void	sort_5(void);
 void	load_range(void);
 
 void	push_to_b();
+void	push_to_a(int *sorted_arr);
 #endif
