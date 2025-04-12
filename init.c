@@ -23,6 +23,8 @@ t_stack	*gv_b(void)
 {
 	static t_stack	b;
 
+	if (b.name == NULL)
+		b.name = "a";
 	return (&b);
 }
 

@@ -34,6 +34,10 @@ void	push(t_stack *stack_to_push, t_stack *stack_to_pop)
 	stack_to_pop->head = new->next;
 	new->next = stack_to_push->head;
 	stack_to_push->head = new;
+	if (stack_to_push->tail == NULL)
+		stack_to_pop->tail = stack_to_pop->head;
+	if (!stack_to_pop->head)
+		stack_to_pop->tail = NULL;
 }
 
 void	rotate(t_stack *stack)

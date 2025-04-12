@@ -20,17 +20,19 @@
 typedef struct s_stack
 {
 	t_list	*head;
-	t_list	*tail;
 	int		size;
+	t_list	*tail;
+	char	*name;
 }			t_stack;
 
-typdef struct s_cont
+typedef struct s_cont
 {
 	int	mid;
 	int	offset;
 	int	start;
-	end;
+	int	end;
 }			t_cont;
+
 t_stack	*gv_a(void);
 t_stack	*gv_b(void);
 char	***gv_arr(void);
@@ -50,4 +52,21 @@ void	r_rotate(t_stack *stack);
 
 int		*list_to_arr(t_list *head, int size);
 void	quick_sort(int *arr, int low, int high);
+
+void	sa(void);
+void	pa(void);
+void	ra(void);
+void	rra(void);
+
+void	ss(void);
+void	rr(void);
+void	rrr(void);
+
+void	sb(void);
+void	pb(void);
+void	rb(void);
+void	rrb(void);
+
+void	sort_3(void);
+void	sort_4(void);
 #endif
