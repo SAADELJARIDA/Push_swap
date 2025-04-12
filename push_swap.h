@@ -35,6 +35,7 @@ typedef struct s_cont
 
 t_stack	*gv_a(void);
 t_stack	*gv_b(void);
+t_cont	*gv_cont(void);
 char	***gv_arr(void);
 
 void	ft_exit(int status);
@@ -73,4 +74,8 @@ int		is_sorted(void);
 void	sort_3(void);
 void	sort_4(void);
 void	sort_5(void);
+
+void	load_range(void);
+
+void	push_to_b();
 #endif

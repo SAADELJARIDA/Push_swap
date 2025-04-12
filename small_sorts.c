@@ -84,9 +84,7 @@ void	sort_4(void)
 	else if (head > second && third > head)
 		sa();
 	else
-	{
 		sa_ra_sa_rra();
-	}
 }
 
 void	sort_5(void)
@@ -112,9 +110,7 @@ void	sort_5(void)
 	if (head > second && head < third)
 		sa();
 	if (head > third && head < fourth)
-	{
 		sa_ra_sa_rra();
-	}
 	if (head > fourth && head < tail)
 	{
 		rra();

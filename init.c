@@ -20,6 +20,12 @@ t_move *gv_move(void)
 	return (&t_move);
 }
  */
+t_cont	*gv_cont(void)
+{
+	static t_cont	cont;
+
+	return (&cont);
+}
 t_stack	*gv_a(void)
 {
 	static t_stack	a;
