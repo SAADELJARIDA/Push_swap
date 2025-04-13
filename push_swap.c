@@ -24,13 +24,13 @@ int	main(int ac, char **av)
 		free_all_exit(0);
 		return (0);
 	}
-	if (a->size == 2)
+	else if (a->size == 2)
 		sa();
-	if (a->size == 3)
+	else if (a->size == 3)
 		sort_3();
-	if (a->size == 4)
+	else if (a->size == 4)
 		sort_4();
-	if (a->size == 5)
+	else if (a->size == 5)
 		sort_5();
 	else
 	{
