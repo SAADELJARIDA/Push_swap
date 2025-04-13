@@ -20,7 +20,10 @@ int	main(int ac, char **av)
 		return (0);
 	a = norm_arg(ac, av);
 	if (is_sorted())
+	{
+		free_all_exit(0);
 		return (0);
+	}
 	if (a->size == 2)
 		sa();
 	if (a->size == 3)
