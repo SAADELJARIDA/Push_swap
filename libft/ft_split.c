@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: sel-jari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 13:41:51 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/11/08 00:19:17 by sel-jari         ###   ########.fr       */
+/*   Created: 2024/11/01 22:42:59 by sel-jari          #+#    #+#             */
+/*   Updated: 2024/11/01 22:43:10 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int	count_words(const char *str, char c)
 {
@@ -107,3 +106,21 @@ char	**ft_split(char const *s, char c)
 	arr[count_words(s, c)] = 0;
 	return (arr);
 }
+/*
+int	main()
+{
+	char const a[] = "saad eljarida,,,asd asd";
+	char **arr;
+	int	i;
+	int	words;
+	char k= ',';
+	i = 0;
+	arr = ft_split(a,k);
+	words = count_words(a,k);
+	while(i < words)
+	{
+		printf("%s\n",arr[i]);	
+		i++;
+	}
+}
+*/

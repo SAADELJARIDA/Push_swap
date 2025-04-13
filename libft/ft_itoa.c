@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: sel-jari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 13:28:22 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/27 23:49:21 by sel-jari         ###   ########.fr       */
+/*   Created: 2024/11/01 22:29:05 by sel-jari          #+#    #+#             */
+/*   Updated: 2024/11/01 22:29:07 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	digit_nbr(int n)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: sel-jari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 13:28:29 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/11/01 07:31:02 by sel-jari         ###   ########.fr       */
+/*   Created: 2024/11/01 22:29:30 by sel-jari          #+#    #+#             */
+/*   Updated: 2024/11/01 23:30:41 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		while (temp->next)
 			temp = temp -> next;
 		temp -> next = new;
-		new->next = NULL;
 	}
 }

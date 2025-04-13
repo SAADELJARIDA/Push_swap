@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: sel-jari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 13:07:20 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/27 14:24:20 by sel-jari         ###   ########.fr       */
+/*   Created: 2024/11/01 22:20:50 by sel-jari          #+#    #+#             */
+/*   Updated: 2024/11/01 22:26:39 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *a)
+int	ft_atoi(const char *a)
 {
 	int	dec;
 	int	sign;

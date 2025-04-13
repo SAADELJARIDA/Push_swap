@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: sel-jari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 13:20:50 by sel-jari          #+#    #+#             */
-/*   Updated: 2024/10/27 13:20:57 by sel-jari         ###   ########.fr       */
+/*   Created: 2024/11/01 22:47:38 by sel-jari          #+#    #+#             */
+/*   Updated: 2024/11/01 22:47:39 by sel-jari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strrchr(const char *str, int c);
 char	*ft_strnstr(const char *h, const char *n, size_t len);
 char	*ft_strdup(const char *s1);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int		ft_atoi(char *str);
+int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);

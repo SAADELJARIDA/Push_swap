@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sel-jari <sel-jari@student.1337.ma>        +#+  +:+       +#+         #
+#    By: sel-jari <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/28 16:29:21 by sel-jari          #+#    #+#              #
-#    Updated: 2024/10/28 16:32:40 by sel-jari         ###   ########.fr        #
+#    Created: 2024/11/01 22:47:21 by sel-jari          #+#    #+#              #
+#    Updated: 2024/11/02 00:06:37 by sel-jari         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,8 +38,9 @@ all: ${NAME}
 ${NAME}: ${OBJF}
 	${LIBC} ${NAME} ${OBJF}
 
-bonus: all ${OBJBF}
+bonus: ${OBJBF}
 	${LIBC} ${NAME} ${OBJBF}
+
 %.o: %.c
 	${CC} ${WFLAGS} -c $< -o $@
 
