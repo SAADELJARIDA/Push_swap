@@ -58,7 +58,7 @@ static void	a_add_back(t_stack *a, int num)
 	ft_lstadd_back(&(a->head), new_node);
 }
 
-t_stack	*norm_arg(int ac, char **av)
+t_stack	*load_a(int ac, char **av)
 {
 	t_stack	*a;
 	char	**arr;

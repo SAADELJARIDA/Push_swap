@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ab_ops.c b_ops.c init.c normalize_input.c push_swap.c stack_ops.c \
-	a_ops.c free_and_exit.c quick_sort.c parse_args.c small_sorts.c big_sort.c \
+SRC = ab_ops.c a_ops.c b_ops.c operations.c init.c normalize_input.c main.c \
+	clean_exit.c sort_arr.c load_a.c small_sorts.c push_to_b.c \
 	push_to_a.c
 
 NAME = push_swap

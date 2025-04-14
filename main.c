@@ -18,7 +18,7 @@ int	main(int ac, char **av)
 
 	if (ac == 1)
 		return (0);
-	a = norm_arg(ac, av);
+	a = load_a(ac, av);
 	if (is_sorted())
 	{
 		free_all_exit(0);

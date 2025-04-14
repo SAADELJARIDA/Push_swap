@@ -19,7 +19,7 @@ void	load_range(void)
 
 	cont = gv_cont();
 	size = gv_a()->size;
-	if (size > 5 && size < 100)
+	if (size > 5 && size <= 100)
 		cont->end = size / 5;
 	if (size > 100 && size <= 500)
 		cont->end = size / 12;
