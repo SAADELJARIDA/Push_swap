@@ -70,15 +70,16 @@ void	sort_4(void)
 	int	tail;
 	int	third;
 
+	if (is_sorted())
+		return ;
 	pb();
 	sort_3();
-	pa();
 	head = *(int *)gv_a()->head->content;
 	second = *(int *)gv_a()->head->next->content;
 	third = *(int *)gv_a()->head->next->next->content;
 	tail = *(int *)gv_a()->tail->content;
 	if (second > head)
-		return ;
+		pa();
 	else if (tail < head)
 		ra();
 	else if (head > second && third > head)
@@ -90,9 +91,14 @@ void	sort_4(void)
 void	sort_5(void)
 {
 	t_sp	sp;
+	int		*arr;
 
-	pb();
-	sort_4();
+	arr = list_to_arr(gv_a()->head, gv_a()->size);
+	quick_sort(arr, 0, gv_a()->size - 1);
+	find2_mins(arr[0]);
+	find2_mins(arr[1]);
+	sort_3();
+	pa();
 	pa();
 	sp.head = *(int *)gv_a()->head->content;
 	sp.second = *(int *)gv_a()->head->next->content;
@@ -107,11 +113,5 @@ void	sort_5(void)
 		sa();
 	if (sp.head > sp.third && sp.head < sp.fourth)
 		sa_ra_sa_rra();
-	if (sp.head > sp.fourth && sp.head < sp.tail)
-	{
-		rra();
-		sa();
-		ra();
-		ra();
-	}
+	free(arr);
 }

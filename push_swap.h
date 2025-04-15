@@ -87,5 +87,6 @@ void	load_range(void);
 
 void	push_to_b(void);
 void	push_to_a(t_list **head_a, t_list **head_b);
-
+int		min_index(t_list *head);
+void	find2_mins(int min);
 #endif

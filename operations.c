@@ -41,15 +41,19 @@ void	push(t_stack *stack_to_push, t_stack *stack_to_pop)
 
 void	rotate(t_stack *stack)
 {
-	t_list	*temp;
+	t_list	*new_tail;
+	t_list	*current;
 
-	if (!stack->head || !stack->head->next)
+	if (stack->head == NULL || stack->head->next == NULL)
 		return ;
-	temp = stack->head->next;
-	stack->tail->next = stack->head;
-	stack->head->next = NULL;
-	stack->head = temp;
-	stack->tail = stack->tail->next;
+	new_tail = stack->head;
+	stack->head = stack->head->next;
+	new_tail->next = NULL;
+	current = stack->head;
+	while (current->next)
+		current = current->next;
+	current->next = new_tail;
+	stack->tail = new_tail;
 }
 
 void	r_rotate(t_stack *stack)
