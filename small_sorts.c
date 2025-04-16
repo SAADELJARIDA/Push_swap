@@ -74,12 +74,13 @@ void	sort_4(void)
 		return ;
 	pb();
 	sort_3();
+	pa();
 	head = *(int *)gv_a()->head->content;
 	second = *(int *)gv_a()->head->next->content;
 	third = *(int *)gv_a()->head->next->next->content;
 	tail = *(int *)gv_a()->tail->content;
 	if (second > head)
-		pa();
+		return ;
 	else if (tail < head)
 		ra();
 	else if (head > second && third > head)
